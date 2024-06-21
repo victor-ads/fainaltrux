@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"], textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <h2>Manage Hero Images</h2>
+        <form id="hero-form">
+            <div class="form-group">
+                <label for="hero-url">Image URL:</label>
+                <input type="text" id="hero-url" name="url">
+            </div>
+            <button type="submit">Add Image</button>
+        </form>
+        <ul id="hero-list"></ul>
+    </div>
+
+    <script>
+        document.getElementById('hero-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const url = document.getElementById('hero-url').value;
+
+            fetch('http://localhost:3000/api/hero-images', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                fetchHeroImages();
+            });
+        });
+
+        function fetchHeroImages() {
+            fetch('http://localhost:3000/api/hero-images')
+                .then(response => response.json())
+                .then(data => {
+                    const heroList = document.getElementById('hero-list');
+                    heroList.innerHTML = '';
+                    data.forEach(image => {
+                        const li = document.createElement('li');
+                        li.textContent = image.url;
+                        heroList.appendChild(li);
+                    });
+                });
+        }
+
+        fetchHeroImages();
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Example responsive CSS */
+body { font-family: Arial, sans-serif; }
+.hero { position: relative; }
+.hero-slides .slide { height: 300px; background-size: cover; background-position: center; }
+.hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; }
+.container { padding: 20px; }
+@media (max-width: 768px) {
+    .hero-slides .slide { height: 200px; }
+    .hero-content h1 { font-size: 24px; }
+    .hero-content p { font-size: 16px; }
+}

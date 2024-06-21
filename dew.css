@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#engineers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Space below the cards container */
+}
+
+.engineer-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: calc(100% / 3 - 20px); /* Default to 3 cards per row */
+}
+
+.engineer-card img {
+    width: 100%;
+    height: auto;
+}
+
+.engineer-info {
+    padding: 20px;
+}
+
+.hire-me-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.hire-me-btn:hover {
+    background-color: #0056b3;
+}
+
+#navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    width: 100%;
+    margin-top: 20px; /* Space above the navigation buttons */
+}
+
+#prev-btn, #next-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .engineer-card {
+        width: calc(100% / 2 - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .engineer-card {
+        width: 100%; /* 1 card per row */
+    }
+}
+
+/* Additional responsive styles for buttons */
+@media (max-width: 768px) {
+    #prev-btn, #next-btn {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #prev-btn, #next-btn {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}

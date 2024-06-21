@@ -1,0 +1,24 @@
+/* styles.css */
+
+
+
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:none; /* Dark background */
+    color: rgb(255, 255, 255); /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: background-color 0.3s; /* Add transition for hover */
+}
+
+#backToTop:hover {
+    background-color: #ffffff; /* Darker background on hover */
+}

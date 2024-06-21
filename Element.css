@@ -1,0 +1,73 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent items from overflowing */
+}
+
+/* Carousel inner wrapper */
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    animation: slide 18s infinite;
+}
+
+/* Individual carousel items */
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide animation */
+@keyframes slide {
+    0%, 16.66% { transform: translateX(0); }
+    33.32%, 49.98% { transform: translateX(-100%); }
+    66.64%, 83.30% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .carousel-item {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .carousel-item {
+        min-width: 100%;
+    }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+    .carousel {
+        height: 60vh; /* Further adjust height for mobile phones */
+    }
+
+    .carousel-item {
+        min-width: 100%;
+    }
+}

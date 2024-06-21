@@ -1,0 +1,51 @@
+:root {
+    --background-light: #ffffff;
+    --background-dark: #121212;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 120px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1000;
+}
+
+#dark-mode-toggle svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--text-light);
+    transition: stroke 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle svg {
+    stroke: var(--text-dark);
+}
+
+@media (max-width: 600px) {
+    #dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    #dark-mode-toggle svg {
+        width: 24px;
+        height: 24px;
+    }
+}

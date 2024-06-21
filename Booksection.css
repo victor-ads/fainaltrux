@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.image-background {
+    background-image: url('image/60-606346_contact-us-png-hd-transparent-png.png'); /* Replace with your image path */
+    background-size: cover;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh; /* Adjust the height as per your requirement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Limit content width for better readability */
+}
+
+.content p {
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .image-background {
+        height: 50vh; /* Adjust height for smaller devices */
+    }
+    
+    .content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    
+    .content p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-background {
+        height: 40vh; /* Further adjust height for smaller devices */
+    }
+    
+    .content {
+        max-width: 90%; /* Adjust content width for very small screens */
+    }
+    
+    .content p {
+        font-size: 1em;
+    }
+}

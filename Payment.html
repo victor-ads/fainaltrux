@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Section</title>
+    <link rel="stylesheet" href="Payment.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="Footer.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-title">
+            <img src="./image/logo1.jpg" alt="Brand Logo">
+        </a>
+        <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Recuirnment.html">Recruitment</a></li>
+                <li><a href="Expert.html">Expert</a></li>
+                <li><a href="Book.html">Book</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Make a Payment</h2>
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method" name="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="paystack">Paystack</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="terms">Terms and Conditions:</label>
+                <input type="checkbox" id="terms" name="terms" required>
+                <span>I agree to the <a href="#">terms and conditions</a></span>
+            </div>
+            <button type="submit">Proceed to Payment</button>
+           
+        </form>
+    </div>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: Truxconsult@gmail.com </p>
+                <p>Address: Imo-State-Nigeria</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Recuirnment.html">Recruitment</a></li>
+                    <li><a href="Expert.html">Expert</a></li>
+                    <li><a href="Book.html">Book</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Privacy Policy</h3>
+                <p><a href="Privacy.html">Read our privacy policy</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Mission & Values</h3>
+                <p>Our mission is to provide a reliable, transparent, and 
+                    cost-effective way to monitor your project.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Find Us</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345090565!2d144.95373531531587!3d-37.8162792797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727db0b6b53e2d!2s123+Main+Street%2C+Melbourne+VIC+3000%2C+Australia!5e0!3m2!1sen!2sus!4v1539311251105" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Truxconsult. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="Navbar.js"></script>
+    <script src="Payment.js"></script> <!-- Link your JavaScript file -->
+    <script src="Footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
